@@ -1,0 +1,40 @@
+@use "colors"
+
+$background: colors.$background
+$primary: colors.$primary
+$secondary: colors.$secondary
+$regular: colors.$regular
+
+*
+  font-family: "Teko", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+html, body
+  width: 100v
+  padding: 0 0
+  margin: 0 0
+
+body
+  background-color: $background
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+h1
+  font-size: 2.75rem
+  text-transform: uppercase
+  margin: 0
+  color: $primary
+
+h3
+  font-size: 1.5rem
+  margin: 0
+  color: $secondary
+
+p
+  font-size: 1.25rem
+  text-align: justify
+  color: $regular
+
+main
+  width: 75vw
