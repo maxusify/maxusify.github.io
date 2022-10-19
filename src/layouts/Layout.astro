@@ -6,10 +6,9 @@ import Navbar from "../components/Navbar.astro";
 
 export interface Props {
 	title: string;
-	navIndex: 0 | 1 | 2 | 3;
 }
 
-const { title, navIndex } = Astro.props;
+const { title, pageName } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -19,11 +18,11 @@ const { title, navIndex } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{`${title} | Michał Pędzik`}</title>
 	</head>
 	<body>
 		<main>
-			<Navbar currentPage={navIndex}/>
+			<Navbar currentPage={title} />
 			<slot />
 		</main>
 	</body>

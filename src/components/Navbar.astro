@@ -1,7 +1,7 @@
 ---
 import "../styles/Navbar.sass"
 import "@fontsource/teko/700.css"
-import "@fontsource/teko/400.css"
+import "@fontsource/teko/300.css"
 
 const brand = "Prinz";
 const navItems = [
@@ -12,7 +12,7 @@ const navItems = [
 ];
 
 export interface Props {
-  currentPage: number;
+  currentPage: string;
 }
 
 const { currentPage } = Astro.props;
@@ -20,16 +20,18 @@ const { currentPage } = Astro.props;
 
 <div class="navbar">
   <div>
-    <div id="navbar-brand">
-      {brand.split("").map(letter => {
-        return <span>{letter}</span>
-      })}
-    </div>
+    <a href="/">
+      <div id="navbar-brand">
+        {brand.split("").map(letter => {
+          return <span>{letter}</span>
+        })}
+      </div>
+    </a>
   </div>
   <div id="navbar-nav">
     <ul>
-      {navItems.map(({name, link}, index) => {
-        if (index === currentPage)
+      {navItems.map(({name, link}) => {
+        if (name === currentPage)
           return <li><a class="navbar-current-page" href={link}>{name}</a></li>
         else
           return <li><a href={link}>{name}</a></li>
