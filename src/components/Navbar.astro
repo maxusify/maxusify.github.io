@@ -20,7 +20,7 @@ const { currentPage } = Astro.props;
 
 <div class="navbar">
   <div>
-    <a href="/portfolio/">
+    <a href="/">
       <div id="navbar-brand">
         {brand.split("").map(letter => {
           return <span>{letter}</span>
@@ -32,7 +32,7 @@ const { currentPage } = Astro.props;
     <ul>
       {navItems.map(({name, link}) => {
         if (name === currentPage)
-          return <li><a class="navbar-current-page" href={`/portfolio/${link}`}>{name}</a></li>
+          return <li><a class="navbar-current-page" href={`${link}`}>{name}</a></li>
         else
           return <li><a href={link}>{name}</a></li>
       })}
