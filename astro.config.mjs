@@ -6,5 +6,7 @@ export default defineConfig({
     ssr: {
       external: ["svgo"],
     }
-  }
+  },
+  site: "https://maxusify.github.io",
+  base: "/portfolio"
 });
