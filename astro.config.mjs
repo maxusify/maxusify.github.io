@@ -8,5 +8,4 @@ export default defineConfig({
     }
   },
   site: "https://maxusify.github.io",
-  base: "/portfolio"
 });
