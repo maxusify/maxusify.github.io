@@ -1,0 +1,44 @@
+@use "colors"
+
+#hero, #headings
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+#hero
+  width: 100%
+  box-sizing: border-box
+  padding: 50px 0
+
+#headings
+  width: 60%
+  padding: 10px 0
+  border-bottom: 1px solid colors.$secondary
+
+#hero-title
+  color: colors.$primary
+  font-size: 7rem
+  font-weight: 700
+  text-transform: uppercase
+  line-height: 1.1
+
+#hero-subtitle
+  color: colors.$regular
+  font-size: 2.75rem
+  font-weight: 300
+  text-transform: uppercase
+  margin-bottom: 10px
+
+.hero-main-profession
+  font-weight: 400
+
+.hero-subtitle-divider
+  color: colors.$secondary
+
+.hero-skill-icon + .hero-skill-icon
+  margin-left: 10px
+
+.hero-skill-icon
+  color: colors.$primary
+  height: 40px

@@ -1,0 +1,29 @@
+---
+import "../styles/Hero.sass"
+import { Icon } from "astro-icon"
+
+const name = "Michał Pędzik";
+const professions = ["Designer", "Developer", "Engineer"];
+const skills = [
+  "akar-icons:react-fill",
+  "cib:svelte",
+  "akar-icons:node-fill",
+  "cib:rust"
+];
+---
+
+<div id="hero">
+  <div id="headings">
+    <span id="hero-title">{name}</span>
+    <span id="hero-subtitle">
+      {professions[0]}
+      <span class="hero-subtitle-divider"> | </span>
+      <span class="hero-main-profession">{professions[1]}</span>
+      <span class="hero-subtitle-divider"> | </span>
+      {professions[2]}
+    </span>
+    <div id="hero-skills">
+      {skills.map(skill => <Icon class="hero-skill-icon" name={skill} />)}
+    </div>
+  </div>
+</div>
