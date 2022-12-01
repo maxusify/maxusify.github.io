@@ -4,6 +4,7 @@ import { Icon } from "astro-icon"
 
 const name = "Michał Pędzik";
 const professions = ["Designer", "Developer", "Engineer"];
+const btnText = "My Portfolio";
 const skills = [
   "akar-icons:react-fill",
   "cib:svelte",
@@ -25,5 +26,10 @@ const skills = [
     <div id="hero-skills">
       {skills.map(skill => <Icon class="hero-skill-icon" name={skill} />)}
     </div>
+  </div>
+  <div id="hero-portfolio-btn">
+    <a href="/portfolio">
+      <button>{btnText}</button>
+    </a>
   </div>
 </div>
