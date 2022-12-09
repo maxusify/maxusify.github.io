@@ -1,0 +1,26 @@
+---
+import "../styles/Portfolio.sass";
+
+export interface Props {
+  project: {
+    name: string;
+    desc: string;
+    link: string;
+    image: string;
+  };
+}
+
+const { name, desc, link, image } = Astro.props.project;
+---
+
+<div class="project-card">
+  <div class="project-card-header">
+    <span class="project-card-title">{name}</span>
+    <span class="project-card-desc">{desc}</span>
+    <span class="project-card-link">
+      <a href={link}>
+        <span>&gt;&gt;&gt;</span>{" "}{link}{" "}<span> &lt;&lt;&lt;</span>
+      </a>
+    </span>
+  </div>
+</div>

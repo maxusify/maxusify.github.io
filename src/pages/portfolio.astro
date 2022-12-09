@@ -1,7 +1,71 @@
 ---
+import Project from "../components/Project.astro";
 import Layout from "../layouts/Layout.astro";
+import "../styles/Portfolio.sass";
+
+const projects = [
+  {
+    name: "Test 1",
+    desc: "Short description",
+    link: "https://example.com",
+    image: "none",
+  },
+  {
+    name: "Test 2",
+    desc: "Short description",
+    link: "https://example.com",
+    image: "none",
+  },
+  {
+    name: "Test 3",
+    desc: "Short description",
+    link: "https://example.com",
+    image: "none",
+  },
+  {
+    name: "Test 4",
+    desc: "Short description",
+    link: "https://example.com",
+    image: "none",
+  },
+  {
+    name: "Test 5",
+    desc: "Short description",
+    link: "https://example.com",
+    image: "none",
+  },
+];
 ---
 
 <Layout title="Portfolio">
-  <main></main>
+  <main>
+    <div id="portfolio-info">
+      <h1>About this page</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
+        libero dolor dicta aliquid blanditiis odit quidem et laboriosam
+        expedita. Explicabo, omnis eos. Amet ducimus voluptatum possimus, illo
+        consectetur praesentium expedita. Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Saepe inventore at minima. Iure ex,
+        possimus aut labore quidem iste quibusdam consequatur voluptas animi
+        nemo ratione corporis a non porro dolor.
+      </p>
+    </div>
+    <div id="portfolio-works">
+      <h1>My projects and other works</h1>
+      <div id="portfolio-works-grid-container">
+        {
+          projects.map((project) => {
+            return <Project project={project} />;
+          })
+        }
+      </div>
+    </div>
+    <div id="portfolio-skills">
+      <h1>Skills summary</h1>
+    </div>
+    <div id="porfolio-summary">
+      <h1>Summary</h1>
+    </div>
+  </main>
 </Layout>

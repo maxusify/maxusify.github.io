@@ -1,0 +1,17 @@
+{
+    "general": {
+        "titleAffix": " | Michał Pędzik"
+    },
+    "indexPage": {
+        "name": "Home Page"
+    },
+    "worksPage": {
+        "name": "Portfolio"
+    },
+    "blogPage": {
+        "name": "Blog"
+    },
+    "contactPage": {
+        "name": "Contact"
+    }
+}
