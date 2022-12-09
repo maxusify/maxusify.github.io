@@ -1,0 +1,26 @@
+---
+import Layout from "./Layout.astro";
+
+import "../styles/Blog.sass";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <article class="blog-post">
+    <header>
+      <h1>{frontmatter.title}</h1>
+      <h4>{frontmatter.author} | {frontmatter.date}</h4>
+      <h5>
+        {
+          frontmatter.tags.map((tag: string) => {
+            return <span class="blogpost-tag">#{tag}</span>;
+          })
+        }
+      </h5>
+    </header>
+    <div class="blogpost-contents">
+      <slot />
+    </div>
+  </article>
+</Layout>
